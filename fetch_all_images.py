@@ -21,5 +21,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     fetch_spacex_images(args.id)
-    #fetch_nasa_apod(token, args.count)
+    fetch_nasa_apod(token, args.count)
     fetch_nasa_epic(token)
