@@ -10,14 +10,11 @@ if __name__ == "__main__":
     load_dotenv()
     token = os.environ['NASA_API_TOKEN']
 
-    try:
-        os.makedirs('images')
-    except FileExistsError:
-        pass
+    os.makedirs('images', exist_ok=True)
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--id', help='ID of the SpaceX launch.')
-    parser.add_argument('--count', help='How many pictures to download')
+    parser = argparse.ArgumentParser(description='Receive SpaceX launch ID (default value "latest") and count of images (default value 3)')
+    parser.add_argument('--id', default='latest', help='ID of the SpaceX launch.')
+    parser.add_argument('--count', default=3, type=int, help='How many pictures to download')
     args = parser.parse_args()
 
     fetch_spacex_images(args.id)
