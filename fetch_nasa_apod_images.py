@@ -26,14 +26,11 @@ if __name__ == "__main__":
     load_dotenv()
     token = os.environ['NASA_API_TOKEN']
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--count', default=3, help='How many images to download')
+    parser = argparse.ArgumentParser(description='Receive count of images, default value 3')
+    parser.add_argument('--count', default=3, type=int, help='How many images to download')
     args = parser.parse_args()
     count_images = args.count
 
-    try:
-        os.makedirs('images')
-    except FileExistsError:
-        pass
+    os.makedirs('images', exist_ok=True)
     
     fetch_nasa_apod(token, count_images)
