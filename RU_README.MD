@@ -117,7 +117,7 @@
 - `fetch_nasa_epic(token)` из скрипта `fetch_nasa_epic_images.py`.
 
 
-### 5. Скрипт `telegram_bot.py`
+### 5. Скрипт `publish_images_bot.py`
 
 Этот скрипт публикует одно изображение в указанном канале Telegram. Изображение может быть выбрано случайным образом из папки или указано по имени.
 
@@ -133,7 +133,7 @@
 
 Скрипт можно запустить из консоли с помощью команды:
 
-`python telegram_bot.py [--folder_name FOLDER_NAME] [--image_name IMAGE_NAME]`
+`python publish_images_bot.py [--folder_name FOLDER_NAME] [--image_name IMAGE_NAME]`
 
 #### Аргументы
 
@@ -141,7 +141,7 @@
 - `--image_name IMAGE_NAME`: (необязательный) Имя изображения для публикации. Если не указано, будет опубликовано случайное изображение из папки.
 
 
-### 6. Скрипт `autopublish_bot.py`
+### 6. Скрипт `autopublish_images_bot.py`
 
 Этот скрипт публикует изображения в указанном канале Telegram с определенными интервалами. Изображения выбираются случайным образом из папки и публикуются с указанной частотой.
 
@@ -157,7 +157,7 @@
 
 Скрипт можно запустить из консоли с помощью следующей команды:
 
-`python autopublish_bot.py [--folder_name FOLDER_NAME]`
+`python autopublish_images_bot.py [--folder_name FOLDER_NAME]`
 
 #### Аргументы
 
