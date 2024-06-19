@@ -10,7 +10,8 @@
 
 `NASA_API_TOKEN=your_nasa_api_token`\
 `TELEGRAM_BOT_TOKEN=your_telegram_bot_token`\
-`FREQUENSY_OF_PUBLICATION=hours`
+`FREQUENSY_OF_PUBLICATION=hours`\
+`TELEGRAM_CHAT_ID=your telegram chat_id`
 
 
 4. Python3 должен быть установлен на вашем компьютере. Затем используйте `pip` (или `pip3`, если есть конфликт с Python2) для установки зависимостей:
