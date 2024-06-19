@@ -5,7 +5,7 @@ import random
 import argparse
 
 
-def public_images(token, chat_id, folder_name, image_name):
+def publish_image(token, chat_id, folder_name, image_name):
     if image_name is None:
         folder_path, folder_names, image_names = next(os.walk(folder_name))
         image_to_publish = random.choice(image_names)
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     folder_name = args.folder_name
     image_name = args.image_name
 
-    public_images(token, chat_id, folder_name, image_name)
+    publish_image(token, chat_id, folder_name, image_name)
 
 
     

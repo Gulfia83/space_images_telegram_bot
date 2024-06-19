@@ -6,7 +6,7 @@ from common_scripts import download_image
 
 def fetch_spacex_images(launch_id=None):
     if launch_id==None:
-        url_api_spaceX = 'https://api.spacexdata.com/v5/launches/5eb87d47ffd86e000604b38a'
+        url_api_spaceX = 'https://api.spacexdata.com/v5/launches/latest'
         response = requests.get(url_api_spaceX)
         response.raise_for_status()
         links = response.json()['links']['flickr']['original']

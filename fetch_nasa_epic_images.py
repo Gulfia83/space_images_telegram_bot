@@ -4,11 +4,6 @@ import os
 import datetime
 from common_scripts import download_image, get_date_from_epic
 
-def get_date_from_epic(date):
-    only_date = date.split(' ')[0]
-    only_date = datetime.datetime.fromisoformat(only_date)
-    date_epic = only_date.strftime('%Y/%m/%d')
-    return date_epic
 
 def fetch_nasa_epic(token):
     url_nasa_epic = 'https://api.nasa.gov/EPIC/api/natural/images'
