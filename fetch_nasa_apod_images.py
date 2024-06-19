@@ -18,7 +18,7 @@ def fetch_nasa_apod(token, count_images):
     for number, image in enumerate(response.json()):
         download_image(
             url=image['url'], 
-            path=f'images/nasa_apod{number}.{get_extension(image["url"])}'
+            path=f'images/nasa_apod{number}{get_extension(image["url"])}'
             )
 
 
