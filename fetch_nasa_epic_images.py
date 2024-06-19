@@ -16,21 +16,19 @@ def fetch_nasa_epic(token):
     for number, image in enumerate(response.json()):
         date_epic = get_date_from_epic(image['date'])
         image_name = image['image']
-        url_image = f'https://api.nasa.gov/EPIC/archive/natural/{date_epic}/png/{image_name}.png?api_key={token}'
+        url_image = f'https://api.nasa.gov/EPIC/archive/natural/{date_epic}/png/{image_name}.png'
         
         download_image(
             url=url_image, 
-            path=f'images/epic{number}.png'
+            path=f'images/epic{number}.png',
+            params=params
         )
 
 def main():
     load_dotenv()
     token = os.environ['NASA_API_TOKEN']
 
-    try:
-        os.makedirs('images')
-    except FileExistsError:
-        pass
+    os.makedirs('images', exist_ok=True)
 
     fetch_nasa_epic(token)
 
